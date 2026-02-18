@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ING Senior PM - AI-Powered Direct Debit</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .slide {
+            width: 100%;
+            min-height: 100vh;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            page-break-after: always;
+        }
+        
+        .slide-cover {
+            background: linear-gradient(135deg, #000066 0%, #FF6200 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .slide-white { background: white; }
+        .slide-navy { background: #000066; color: white; }
+        .slide-orange { background: #FF6200; color: white; }
+        .slide-gray { background: #f8f9fa; }
+        .slide-ai {
+            background: linear-gradient(135deg, #1a1a4a 0%, #000066 50%, #FF6200 100%);
+            color: white;
+        }
+        
+        h1 { font-size: 56px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
+        h2 { font-size: 42px; font-weight: 600; margin-bottom: 30px; color: #000066; }
+        .slide-navy h2, .slide-orange h2, .slide-cover h2, .slide-ai h2 { color: white; }
+        h3 { font-size: 28px; font-weight: 600; margin-bottom: 20px; color: #FF6200; }
+        .slide-orange h3 { color: white; }
+        
+        p { font-size: 22px; margin-bottom: 20px; line-height: 1.6; }
+        .subtitle { font-size: 28px; opacity: 0.9; margin-top: 10px; }
+        .date { font-size: 20px; opacity: 0.8; margin-top: 40px; }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .slide-white .card, .slide-gray .card {
+            border: 2px solid #e0e0e0;
+        }
+        
+        ul { list-style: none; padding: 0; }
+        li {
+            font-size: 20px;
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #FF6200;
+            font-weight: bold;
+        }
+        .slide-orange li::before { color: white; }
+        
+        .stat-box { text-align: center; padding: 30px; }
+        .stat-number {
+            font-size: 56px;
+            font-weight: 700;
+            color: #FF6200;
+        }
+        .slide-orange .stat-number, .slide-ai .stat-number { color: white; }
+        .stat-label { font-size: 18px; opacity: 0.9; margin-top: 10px; }
+        
+        .quote {
+            font-size: 28px;
+            font-style: italic;
+            border-left: 4px solid #FF6200;
+            padding-left: 30px;
+            margin: 30px 0;
+        }
+        
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; }
+        th {
+            background: #000066;
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-size: 18px;
+        }
+        td { padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 18px; }
+        tr:hover { background: #f8f9fa; }
+        
+        .highlight-box {
+            background: rgba(255, 98, 0, 0.1);
+            border-left: 4px solid #FF6200;
+            padding: 24px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .slide-orange .highlight-box, .slide-ai .highlight-box {
+            background: rgba(255,255,255,0.2);
+            border-left-color: white;
+        }
+        
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 98, 0, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        .r-code {
+            font-family: monospace;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        
+        @media print {
+            .slide { page-break-after: always; min-height: auto; padding: 40px; }
+        }
+        
+        @media (max-width: 1024px) {
+            .two-column, .three-column { grid-template-columns: 1fr; }
+            h1 { font-size: 40px; }
+            h2 { font-size: 32px; }
+            p { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SLIDE 1: Cover -->
+<div class="slide slide-ai">
+    <div class="ai-badge">🤖 AI-Powered Innovation</div>
+    <h1>Transforming ING Direct Debit with AI</h1>
+    <p class="subtitle">From Reactive to Predictive: Smart R-Message Analysis & Intelligent Retry</p>
+    <p style="font-size: 24px; margin-top: 40px;">Senior Product Manager Interview</p>
+    <p class="date">ING Netherlands | February 2026</p>
+</div>
+
+<!-- SLIDE 2: The Problem -->
+<div class="slide slide-white">
+    <h2>The Current Reality: Reactive Direct Debit</h2>
+    
+    <div class="two-column">
+        <div>
+            <h3>❌ What Happens Today</h3>
+            <ul>
+                <li>Payment fails → Wait for R-message</li>
+                <li>Merchant manually analyzes reason code</li>
+                <li>"Try again in a few days" - no intelligence</li>
+                <li>No prediction of failure before it happens</li>
+                <li>5-15% failure rate accepted as "normal"</li>
+                <li>Customer churn due to payment friction</li>
+            </ul>
+        </div>
+        <div>
+            <h3>📊 The Cost of Inaction</h3>
+            <table>
+                <tr>
+                    <td><strong>Failed Payment Rate</strong></td>
+                    <td>5-15%</td>
+                </tr>
+                <tr>
+                    <td><strong>Recovery Rate</strong></td>
+                    <td>Only 35%</td>
+                </tr>
+                <tr>
+                    <td><strong>Manual Analysis Time</strong></td>
+                    <td>15-30 min per failure</td>
+                </tr>
+                <tr>
+                    <td><strong>Customer Churn</strong></td>
+                    <td>+25% after failed payment</td>
+                </tr>
+                <tr>
+                    <td><strong>Revenue Loss (NL)</strong></td>
+                    <td>€500M+ annually</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 3: R-Messages Deep Dive -->
+<div class="slide slide-navy">
+    <h2>Understanding R-Messages: The AI Opportunity</h2>
+    <p style="font-size: 24px; margin-bottom: 30px;">ING's R-message system reports 15+ failure reason codes. Each code tells a story AI can interpret.</p>
+    
+    <div class="three-column">
+        <div class="stat-box">
+            <div class="r-code">AM04</div>
+            <div class="stat-label" style="margin-top: 15px;"><strong>Insufficient Funds</strong><br>Most Common (40%)</div>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">AI can predict based on balance patterns</p>
+        </div>
+        <div class="stat-box">
+            <div class="r-code">MD01</div>
+            <div class="stat-label" style="margin-top: 15px;"><strong>No Valid Mandate</strong><br>Expired after 36mo</div>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">AI can alert before expiration</p>
+        </div>
+        <div class="stat-box">
+            <div class="r-code">AC04</div>
+            <div class="stat-label" style="margin-top: 15px;"><strong>Account Closed</strong><br>Customer churn signal</div>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">AI can detect account changes</p>
+        </div>
+    </div>
+    
+    <div class="highlight-box" style="margin-top: 40px;">
+        <strong>Key Insight:</strong> Each R-message has a specific re-initiation rule (FRST, RCUR, OOFF). AI can automatically determine the correct sequence type and optimal timing for retry.
+    </div>
+</div>
+
+<!-- SLIDE 4: AI Solution Overview -->
+<div class="slide slide-orange">
+    <h2>The AI-Powered Solution</h2>
+    
+    <div class="three-column">
+        <div>
+            <h3>🧠 Predict</h3>
+            <p style="font-size: 18px;">AI analyzes account patterns to predict failures BEFORE they happen. "Your €145 payment has 78% failure risk on Aug 15."</p>
+        </div>
+        <div>
+            <h3>⚡ Prevent</h3>
+            <p style="font-size: 18px;">Proactive alerts to customers and merchants. Automatic rescheduling to optimal dates based on balance history.</p>
+        </div>
+        <div>
+            <h3>🎯 Recover</h3>
+            <p style="font-size: 18px;">Smart retry with AI-optimized timing. R-message analysis with automatic sequence type selection.</p>
+        </div>
+    </div>
+    
+    <div class="highlight-box" style="margin-top: 40px;">
+        <strong>The Vision:</strong> Transform ING Direct Debit from a passive payment rail into an intelligent, self-optimizing revenue protection system.
+    </div>
+</div>
+
+<!-- SLIDE 5: AI Features -->
+<div class="slide slide-gray">
+    <h2>AI Features: From R-Message to Action</h2>
+    
+    <div class="two-column">
+        <div>
+            <h3>🤖 Smart R-Message Interpreter</h3>
+            <ul>
+                <li><strong>AM04 (Insufficient Funds):</strong> AI suggests optimal retry date based on customer's salary pattern</li>
+                <li><strong>MD01 (No Valid Mandate):</strong> AI triggers digital mandate request workflow</li>
+                <li><strong>AC04 (Account Closed):</strong> AI flags for customer success team outreach</li>
+                <li><strong>MS02 (Refusal):</strong> AI analyzes refusal pattern for churn risk</li>
+                <li><strong>Auto sequence type:</strong> FRST/RCUR/OOFF selection based on R-type</li>
+            </ul>
+        </div>
+        <div>
+            <h3>📊 Predictive Cash Flow</h3>
+            <ul>
+                <li><strong>Balance forecasting:</strong> "You'll have €2,847 on Aug 15"</li>
+                <li><strong>Payment success prediction:</strong> 94% confidence scoring</li>
+                <li><strong>Optimal date recommendation:</strong> "Move to Aug 1 for 98% success"</li>
+                <li><strong>Revenue projection:</strong> Merchant dashboard with AI forecasts</li>
+                <li><strong>Churn risk alerts:</strong> Early warning system</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 6: Product Concept -->
+<div class="slide slide-white">
+    <h2>"ING Direct Debit AI" - Product Concept</h2>
+    
+    <div class="card" style="margin-bottom: 30px;">
+        <h3 style="color: #000066;">🎯 Core Value Proposition</h3>
+        <p style="font-size: 20px;"><strong>For Merchants:</strong> "Never lose a payment to preventable failures. Our AI predicts, prevents, and recovers failed payments automatically."</p>
+        <p style="font-size: 20px;"><strong>For Consumers:</strong> "Stay in control with smart alerts and flexible scheduling. No more surprise failed payments."</p>
+    </div>
+    
+    <div class="three-column">
+        <div class="card">
+            <h3>📱 Consumer App</h3>
+            <ul style="font-size: 16px;">
+                <li>AI payment predictions</li>
+                <li>Smart retry notifications</li>
+                <li>One-tap reschedule</li>
+                <li>Cash flow insights</li>
+                <li>Mandate management</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>💼 Merchant Dashboard</h3>
+            <ul style="font-size: 16px;">
+                <li>R-message AI analysis</li>
+                <li>Success rate forecasting</li>
+                <li>Auto-retry configuration</li>
+                <li>Churn risk alerts</li>
+                <li>Revenue optimization</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>🔌 API Platform</h3>
+            <ul style="font-size: 16px;">
+                <li>AI prediction endpoints</li>
+                <li>Smart retry webhooks</li>
+                <li>R-message insights</li>
+                <li>Real-time analytics</li>
+                <li>Custom ML models</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 7: AI Impact Metrics -->
+<div class="slide slide-ai">
+    <h2>Expected AI Impact</h2>
+    
+    <div class="three-column">
+        <div class="stat-box">
+            <div class="stat-number">-60%</div>
+            <div class="stat-label">Failed Payments<br>Through Prediction</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">+45%</div>
+            <div class="stat-label">Recovery Rate<br>Smart Retry AI</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Success Rate<br>With AI Optimization</div>
+        </div>
+    </div>
+    
+    <div class="three-column" style="margin-top: 40px;">
+        <div class="stat-box">
+            <div class="stat-number">-80%</div>
+            <div class="stat-label">Manual Analysis Time<br>Automated R-Message</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">-30%</div>
+            <div class="stat-label">Customer Churn<br>Proactive Alerts</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">€300M</div>
+            <div class="stat-label">Revenue Protected<br>Annually (NL)</div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 8: Technical Architecture -->
+<div class="slide slide-gray">
+    <h2>AI Technical Architecture</h2>
+    
+    <div class="card" style="margin-bottom: 30px;">
+        <h3 style="color: #000066;">🧠 AI/ML Components</h3>
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Function</th>
+                <th>Data Source</th>
+            </tr>
+            <tr>
+                <td><strong>Balance Predictor</strong></td>
+                <td>Forecast account balance on payment date</td>
+                <td>Transaction history, salary patterns</td>
+            </tr>
+            <tr>
+                <td><strong>R-Message Classifier</strong></td>
+                <td>Auto-categorize failures, suggest actions</td>
+                <td>ING R-message codes, merchant data</td>
+            </tr>
+            <tr>
+                <td><strong>Retry Optimizer</strong></td>
+                <td>Determine optimal retry date/time</td>
+                <td>Customer behavior, calendar patterns</td>
+            </tr>
+            <tr>
+                <td><strong>Churn Predictor</strong></td>
+                <td>Identify at-risk customers</td>
+                <td>Payment patterns, R-message frequency</td>
+            </tr>
+            <tr>
+                <td><strong>Sequence Type Selector</strong></td>
+                <td>Auto-select FRST/RCUR/OOFF</td>
+                <td>R-type, mandate history, SEPA rules</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- SLIDE 9: Roadmap -->
+<div class="slide slide-white">
+    <h2>AI Implementation Roadmap</h2>
+    
+    <div class="two-column">
+        <div>
+            <h3>🚀 Phase 1: Foundation (Q1)</h3>
+            <ul>
+                <li>R-message data pipeline</li>
+                <li>Basic ML model for AM04 prediction</li>
+                <li>Merchant dashboard MVP</li>
+                <li>Smart retry (rule-based)</li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;">🧠 Phase 2: Intelligence (Q2)</h3>
+            <ul>
+                <li>AI-powered R-message interpreter</li>
+                <li>Balance prediction model</li>
+                <li>Consumer mobile app</li>
+                <li>Auto sequence type selection</li>
+            </ul>
+        </div>
+        <div>
+            <h3>⚡ Phase 3: Automation (Q3)</h3>
+            <ul>
+                <li>Fully automated smart retry</li>
+                <li>Churn prediction alerts</li>
+                <li>Revenue forecasting dashboard</li>
+                <li>API platform launch</li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;">🌍 Phase 4: Scale (Q4)</h3>
+            <ul>
+                <li>Germany expansion</li>
+                <li>Custom ML models per merchant</li>
+                <li>Real-time optimization</li>
+                <li>Industry benchmarking</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 10: Why Me -->
+<div class="slide slide-orange">
+    <h2>Why I'm the Right PM for AI Direct Debit</h2>
+    
+    <div class="two-column">
+        <div>
+            <h3>🎯 Product Skills</h3>
+            <ul>
+                <li>8+ years building data-driven products</li>
+                <li>ML/AI product experience</li>
+                <li>B2B2C platform thinking</li>
+                <li>API product management</li>
+                <li>Experimentation & A/B testing</li>
+            </ul>
+        </div>
+        <div>
+            <h3>🏦 Domain Knowledge</h3>
+            <ul>
+                <li>Deep understanding of SEPA Direct Debit</li>
+                <li>R-message & SEPA rulebook expertise</li>
+                <li>Payment systems architecture</li>
+                <li>Merchant pain points</li>
+                <li>Consumer UX in fintech</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="highlight-box" style="margin-top: 40px;">
+        <strong>My Unique Value:</strong> I combine deep SEPA Direct Debit domain knowledge with AI product experience. I can translate R-message codes into actionable AI features that merchants and consumers love.
+    </div>
+</div>
+
+<!-- SLIDE 11: Demo Preview -->
+<div class="slide slide-navy">
+    <h2>Demo: AI-Powered Direct Debit Dashboard</h2>
+    <p style="font-size: 24px; margin-bottom: 40px;">Built based on ING's current UI + AI enhancements</p>
+    
+    <div class="three-column">
+        <div class="card" style="color: #333;">
+            <h3 style="color: #FF6200;">📊 AI Insights Panel</h3>
+            <p style="font-size: 16px;">"3 opportunities found. Potential savings: €127 this month."</p>
+            <ul style="font-size: 14px;">
+                <li>Predicted insufficient funds</li>
+                <li>Optimal payment date</li>
+                <li>Cost optimization tips</li>
+            </ul>
+        </div>
+        <div class="card" style="color: #333;">
+            <h3 style="color: #FF6200;">🧠 R-Message AI</h3>
+            <p style="font-size: 16px;">Smart analysis of failed payments with actionable suggestions</p>
+            <ul style="font-size: 14px;">
+                <li>AM04 → Retry on salary day</li>
+                <li>MD01 → Request new mandate</li>
+                <li>AC04 → Contact customer</li>
+            </ul>
+        </div>
+        <div class="card" style="color: #333;">
+            <h3 style="color: #FF6200;">⚡ Smart Retry</h3>
+            <p style="font-size: 16px;">"AI recommends retry tomorrow at 9 AM. Expected success: 87%"</p>
+            <ul style="font-size: 14px;">
+                <li>Auto sequence type</li>
+                <li>Optimal timing</li>
+                <li>One-click apply</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 50px;">
+        <p style="font-size: 20px; opacity: 0.9;">💻 Live prototype available at:</p>
+        <p style="font-size: 18px; font-family: monospace; background: rgba(255,255,255,0.1); padding: 12px 24px; border-radius: 8px; display: inline-block; margin-top: 10px;">ing-ai-direct-debit.html</p>
+    </div>
+</div>
+
+<!-- SLIDE 12: Questions -->
+<div class="slide slide-gray">
+    <h2>Questions for ING</h2>
+    
+    <div class="two-column">
+        <div>
+            <h3>🤖 AI & Data</h3>
+            <ul>
+                <li>What R-message data is currently available for ML training?</li>
+                <li>Is there an existing data science team for payment AI?</li>
+                <li>What's the current retry logic - rule-based or manual?</li>
+                <li>Are merchant balance patterns accessible for prediction?</li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;">🎯 Product</h3>
+            <ul>
+                <li>What's the biggest pain point for merchants today?</li>
+                <li>Which R-message code causes the most revenue loss?</li>
+                <li>How do merchants currently handle failed payments?</li>
+            </ul>
+        </div>
+        <div>
+            <h3>🚀 Strategy</h3>
+            <ul>
+                <li>Is AI a strategic priority for Payments?</li>
+                <li>What's the appetite for innovation vs. stability?</li>
+                <li>How does ING view competition from Stripe/GoCardless AI?</li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;">📊 Success Metrics</h3>
+            <ul>
+                <li>How is Direct Debit success measured today?</li>
+                <li>What failure rate is considered "acceptable"?</li>
+                <li>What's the target for recovery rate improvement?</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 13: Closing -->
+<div class="slide slide-ai">
+    <div class="ai-badge">🚀 Let's Build the Future</div>
+    <h1>ING Direct Debit AI</h1>
+    <p class="subtitle">Transforming payments from reactive to predictive</p>
+    <p style="font-size: 24px; margin-top: 60px;">Thank you for your time</p>
+    <p class="date" style="margin-top: 40px;">Questions & Discussion</p>
+</div>
+
+</body>
+</html>
